@@ -16,6 +16,7 @@ namespace Lab06Console
       lion.HairStyle = "long and wavy";
       lion.MemberCount = 4;
       lion.CountryofOrigin = "New York";
+
       Zoo[] metals = new Zoo[]
       {
             scorps,
@@ -26,7 +27,7 @@ namespace Lab06Console
         Zoo metal = metals[i];
         Console.WriteLine("Metal Genre");
         Console.WriteLine($"The band name is:  {metal.Name}");
-        Console.WriteLine("MemberCount: {0}", metal.MemberCount);
+        Console.WriteLine("Member Count: {0}", metal.MemberCount);
         Console.WriteLine($"Dead members = {metal.DeadMembers}");
         metal.PrintMembers();
         metal.PrintSummary();
@@ -38,28 +39,45 @@ namespace Lab06Console
       eagles.MemberCount = 6;
       eagles.CountryofOrigin = "California";
  
-
       Zoo[] rocks = new Zoo[]
       {
             eagles,
-            //lion,
+            //strayCats,
       };
       for (int i = 0; i < rocks.Length; i++)
       {
         Zoo rock = rocks[i];
         Console.WriteLine("Rock Genre");
         Console.WriteLine($"The band name is:  {rock.Name}");
-        Console.WriteLine("MemberCount: {0}", rock.MemberCount);
+        Console.WriteLine("Member Count: {0}", rock.MemberCount);
         Console.WriteLine($"{rock.Name} founding members are:  { rock.Founders}");
         Console.WriteLine($"Dead members = {rock.DeadMembers}");
-        Console.WriteLine($"{rock.Name} utilizes some unique instruments like {rock.Instrument}");
+        //Console.WriteLine($"{rock.Name} utilizes some unique instruments like {rock.Instrument}");
         rock.PrintMembers();
         rock.PrintSummary();
         Console.WriteLine("*************************************************************************");
       }//end of the for rock loop
       //-----------------------------------------------End of Rock---------------------------------------------------
 
+      Pop beatles = new Beatles();
+      beatles.HairStyle = "bowl cut";
+      beatles.MemberCount = 4;
+      beatles.CountryofOrigin = "UK";
 
+      Zoo[] pops = new Zoo[]
+      {
+        beatles,
+      };
+      for(int i = 0; i < pops.Length; i++)
+      {
+        Zoo pop = pops[i];
+        Console.WriteLine("Pop Genre");
+        Console.WriteLine($"The band name is:  {pop.Name}");
+        Console.WriteLine("Member Count: {0}", pop.MemberCount);
+        Console.WriteLine($"{pop.Name} had a TV Show?  {pop.TVShow}");
+        Console.WriteLine("*************************************************************************");
+      }//end of the for pop loop
+      //-----------------------------------------------End of Pop---------------------------------------------------
     }//end of Main
   }
 
@@ -68,7 +86,8 @@ namespace Lab06Console
   {
     public string Name { get; protected set; }  //can only assign in child class
     public string Founders { get; protected set; }
-    public string Instrument { get; set; }
+    //public string Instrument { get; set; }  //needs to not inherit from Zoo
+    public bool TVShow { get; }//needs to not inherit from Zoo
     public string HairStyle { get; set; }
     public int MemberCount { get; set; }
     public string CountryofOrigin { get; set; }
