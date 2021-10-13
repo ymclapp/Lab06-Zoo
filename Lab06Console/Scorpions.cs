@@ -6,27 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lab06Console
 {
-  class Scorpions : Metal
+  public class Scorpions : Metal//Scorpions is a child of Metal
   {
     public Scorpions() : base("Scorpions")//call  base constructor with name
     {
     }
     public override bool DeadMembers => false;
-    public override string[] GetSongs()
+    public override string Songs()
     {
-      return new string[]
-      {
-        "The Zoo",
-        "Winds of Change",
-        "Rock You Like A Hurricane"
-      };
+      return ("The Zoo, Winds of Change, Rock You Like A Hurricane");
     }
-      public override void PrintMembers()
+     public override string PrintMembers()
     {
-      Console.WriteLine("The members of the band are:");
-      Console.WriteLine("Klaus Meine");
-      Console.WriteLine("Rudolf Schenker");
-      Console.WriteLine("Michael Schenker");
+      Console.WriteLine("The members of the band are: ");
+      return ("Klaus Meine, Rudolf Schenker, Michael Schenker");
+
     }
     
   }

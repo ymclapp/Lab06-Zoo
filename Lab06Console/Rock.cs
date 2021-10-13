@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lab06Console
 {
-  public abstract class Metal : Zoo  //extends Zoo
+  public abstract class Rock : Zoo  //extends Zoo
   {
-   // Metal metal = new Metal();
-    public Metal(string name)
+
+    public Rock(string name, string founders)
     {
       Name = name;
+      Founders = founders;
     }
 
-    //public abstract string[] GetSongs();
   }
 }
