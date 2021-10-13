@@ -15,14 +15,15 @@ namespace Lab06Console.Tests
     {
 
       //Arrange
-       Metal metal = new Metal;
+       Scorpions scorpions = new Scorpions();
+      string members = "Klaus Meine, Rudolf Schenker, Michael Schenker";
 
 
       //Act
-
+      string result = scorpions.PrintMembers();
 
       //Assert
-
+      Assert.Equal(result, members);
 
     }
 
