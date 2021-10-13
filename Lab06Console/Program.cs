@@ -32,7 +32,7 @@ namespace Lab06Console
         metal.PrintSummary();
         Console.WriteLine("*************************************************************************");
       }//end of the metal for loop
-
+      //----------------------------------------End of Metal-----------------------------------------------------
       Rock eagles = new TheEagles();
       eagles.HairStyle = "medium length and curly";
       eagles.MemberCount = 6;
@@ -52,10 +52,13 @@ namespace Lab06Console
         Console.WriteLine("MemberCount: {0}", rock.MemberCount);
         Console.WriteLine($"{rock.Name} founding members are:  { rock.Founders}");
         Console.WriteLine($"Dead members = {rock.DeadMembers}");
+        Console.WriteLine($"{rock.Name} utilizes some unique instruments like {rock.Instrument}");
         rock.PrintMembers();
         rock.PrintSummary();
         Console.WriteLine("*************************************************************************");
       }//end of the for rock loop
+      //-----------------------------------------------End of Rock---------------------------------------------------
+
 
     }//end of Main
   }
@@ -65,6 +68,7 @@ namespace Lab06Console
   {
     public string Name { get; protected set; }  //can only assign in child class
     public string Founders { get; protected set; }
+    public string Instrument { get; set; }
     public string HairStyle { get; set; }
     public int MemberCount { get; set; }
     public string CountryofOrigin { get; set; }
