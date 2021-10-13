@@ -16,5 +16,10 @@ namespace Lab06Console
     {
       return ("Hard Days Night, Yellow Submarine, Help");
     }
+    public override string PrintMembers()
+    {
+      Console.WriteLine("The members of the band are: ");
+      return ("Paul McCartney, John Lennon, George Harrison, Ringo Starr");
+    }
   }
 }

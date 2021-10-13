@@ -75,6 +75,10 @@ namespace Lab06Console
         Console.WriteLine($"The band name is:  {pop.Name}");
         Console.WriteLine("Member Count: {0}", pop.MemberCount);
         Console.WriteLine($"{pop.Name} had a TV Show?  {pop.TVShow}");
+        Console.WriteLine($"Dead members = {pop.DeadMembers}");
+        //Console.WriteLine($"{rock.Name} utilizes some unique instruments like {rock.Instrument}");
+        pop.PrintMembers();
+        pop.PrintSummary();
         Console.WriteLine("*************************************************************************");
       }//end of the for pop loop
       //-----------------------------------------------End of Pop---------------------------------------------------
@@ -87,7 +91,7 @@ namespace Lab06Console
     public string Name { get; protected set; }  //can only assign in child class
     public string Founders { get; protected set; }
     //public string Instrument { get; set; }  //needs to not inherit from Zoo
-    public bool TVShow { get; }//needs to not inherit from Zoo
+    public bool TVShow { get; protected set; }//needs to not inherit from Zoo
     public string HairStyle { get; set; }
     public int MemberCount { get; set; }
     public string CountryofOrigin { get; set; }
