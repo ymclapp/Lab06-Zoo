@@ -8,7 +8,7 @@ namespace Lab06Console
 {
   public class Beatles : Pop//child of Pop
   {
-    public Beatles() : base("Beatles", true)//call the base constructor
+    public Beatles() : base("The Beatles", true)//call the base constructor
     {
     }
     public override bool DeadMembers => true;
@@ -19,7 +19,7 @@ namespace Lab06Console
     public override string PrintMembers()
     {
       Console.WriteLine("The members of the band are: ");
-      return ("Paul McCartney, John Lennon, George Harrison, Ringo Starr");
+      return ("Paul McCartney, John Lennon, Ringo Starr, George Harrison");
     }
   }
 }
